@@ -10,6 +10,7 @@ public class MyTest {
         ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
         // 我们的对象现在都在Spring中的管理了，我们要使用，直接去里面取出来就可以了！
         Hello hello1 = (Hello) context.getBean("hello");
+        // 也可以通过此方法获取
         Hello hello2 =  context.getBean(Hello.class);
         System.out.println(hello1.toString());
         System.out.println(hello2.toString());
